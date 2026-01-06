@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Vouch Bot</title>
+    <style>
+        /* --- RESET & FONTS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* --- BACKGROUND ANIMATION --- */
+        body {
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0; /* For animation */
+            animation: fadeInDown 1s forwards 0.5s;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(#00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 20px rgba(0, 114, 255, 0.3);
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* --- CARDS GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- GLASSMORPHISM CARD --- */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+            opacity: 0; /* For scroll reveal */
+            transform: translateY(30px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 198, 255, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00c6ff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #d1d1d1;
+        }
+
+        /* --- ICONS (CSS SHAPES) --- */
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 1.5s;
+        }
+
+        .btn:hover {
+            box-shadow: 0 15px 30px rgba(0, 114, 255, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInDown {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- SCROLL BAR --- */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00c6ff; }
+        
+        /* Highlight specific for Vouch Bot context */
+        .highlight {
+            color: #ff4b4b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Please read the rules before using our Middleman & Vouch System.</p>
+        </header>
+
+        <div class="grid">
+            <div class="card reveal">
+                <h3><span>📜</span> 1. Acceptance of Terms</h3>
+                <p>By using this Discord bot, executing commands (such as <code>/add</code>, <code>/leaderboard</code>, or <code>/profile</code>), or participating in our ecosystem, you automatically agree to be bound by these Terms of Service.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3><span>🛡️</span> 2. Middleman Liability</h3>
+                <p>This bot serves as a <span class="highlight">logging and reputation tool</span> only. The developers and administrators of this bot are <strong>not responsible</strong> for any financial loss, scams, or disputes that occur between users. All deals are done at your own risk.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3><span>📊</span> 3. Data Collection</h3>
+                <p>To function correctly, we store specific data including your <strong>Discord User ID</strong>, transaction amounts, and timestamps in our database (Firebase). We do not store personal financial details like credit card numbers or passwords.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3><span>🚫</span> 4. Prohibited Usage</h3>
+                <p>Falsifying deals (Fake Vouching) to manipulate the leaderboard or badge system is strictly prohibited. Users found abusing the system will have their profile <strong>permanently cleared</strong> and may be blacklisted from the bot.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3><span>⚖️</span> 5. Disputes & Refunds</h3>
+                <p>The bot does not handle money directly. It tracks numbers provided by administrators. Therefore, we cannot issue refunds. Disputes regarding deals must be settled between the involved parties or server staff.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3><span>🔄</span> 6. Changes to Terms</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of the bot after changes constitutes acceptance of the new terms. It is your responsibility to review these terms periodically.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="#" class="btn">I Agree & Continue</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Rare Services / DD Vouch Bot. All rights reserved.<br>
+            Designed for Discord Communities.
+        </footer>
+    </div>
+
+    <script>
+        // Simple Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
